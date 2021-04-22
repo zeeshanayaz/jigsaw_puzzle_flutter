@@ -4,7 +4,7 @@ Flutter application.
 
 ## Sample Preview
 
-
+![Jigsaw Sample Preview](.gif)
 
 ## Getting Started
 
