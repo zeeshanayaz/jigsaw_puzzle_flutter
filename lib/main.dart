@@ -56,8 +56,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<Size> getImageSize(Image image) async {
     final Completer<Size> completer = Completer<Size>();
 
-    image.image.resolve(const ImageConfiguration()).addListener(ImageStreamListener(
-          (ImageInfo info, bool _) {
+    image.image
+        .resolve(const ImageConfiguration())
+        .addListener(ImageStreamListener(
+      (ImageInfo info, bool _) {
         completer.complete(Size(
           info.image.width.toDouble(),
           info.image.height.toDouble(),
@@ -77,7 +79,8 @@ class _MyHomePageState extends State<MyHomePage> {
     for (int x = 0; x < widget.rows; x++) {
       for (int y = 0; y < widget.cols; y++) {
         setState(() {
-          pieces.add(PuzzlePiece(key: GlobalKey(),
+          pieces.add(PuzzlePiece(
+              key: GlobalKey(),
               image: image,
               imageSize: imageSize,
               row: x,
@@ -107,7 +110,6 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,10 +117,25 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: SafeArea(
-        child: Center(
-          child: _image == null
-              ? new Text('No image selected.')
-              : Stack(children: pieces),
+        child: Column(
+          children: [
+            Expanded(
+              child: Center(
+                child: _image == null
+                    ? new Text('No image selected.')
+                    : Stack(children: pieces),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Image.file(
+                _image,
+                width: double.infinity,
+                height: 100,
+                alignment: Alignment.bottomLeft,
+              ),
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
