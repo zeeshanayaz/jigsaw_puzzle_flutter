@@ -128,12 +128,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             Padding(
               padding: EdgeInsets.all(10),
-              child: Image.file(
-                _image,
-                width: double.infinity,
-                height: 100,
-                alignment: Alignment.bottomLeft,
-              ),
+              child: _image == null
+                  ? Text("")
+                  : Image.file(
+                      _image,
+                      width: double.infinity,
+                      height: 100,
+                      alignment: Alignment.bottomLeft,
+                    ),
             ),
           ],
         ),
