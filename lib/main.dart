@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
     if (image != null) {
       setState(() {
-        print(_image);
+        print("Image Path $_image");
         _image = image;
         pieces.clear();
       });

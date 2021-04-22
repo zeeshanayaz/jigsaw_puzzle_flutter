@@ -6,6 +6,13 @@ Flutter application.
 
 ![Jigsaw Sample Preview](https://github.com/zeeshanayaz/jigsaw_puzzle_flutter/blob/master/assets/demo/jigsaw_sample_preview.gif)
 
+<p float="left">
+  <img src="https://github.com/zeeshanayaz/jigsaw_puzzle_flutter/blob/master/assets/demo/screen_1.png" width="100" />
+  <img src="https://github.com/zeeshanayaz/jigsaw_puzzle_flutter/blob/master/assets/demo/screen_2.png" width="100" />
+  <img src="https://github.com/zeeshanayaz/jigsaw_puzzle_flutter/blob/master/assets/demo/screen_3.png" width="100" />
+  <img src="https://github.com/zeeshanayaz/jigsaw_puzzle_flutter/blob/master/assets/demo/screen_4.png" width="100" />
+</p>
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
