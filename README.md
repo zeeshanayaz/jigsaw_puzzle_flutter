@@ -4,7 +4,7 @@ Flutter application.
 
 ## Sample Preview
 
-![Jigsaw Sample Preview](.gif)
+![Jigsaw Sample Preview](https://github.com/zeeshanayaz/jigsaw_puzzle_flutter/blob/master/assets/demo/jigsaw_sample_preview.gif)
 
 ## Getting Started
 
