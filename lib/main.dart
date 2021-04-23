@@ -38,6 +38,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   File _image;
   List<Widget> pieces = [];
+  int piecesCount = 0;
 
   Future getImage(ImageSource source) async {
     var image = await ImagePicker.pickImage(source: source);
@@ -92,6 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
         });
       }
     }
+    piecesCount = pieces.length;
   }
 
   // when the pan of a piece starts, we need to bring it to the front of the stack
@@ -107,7 +109,11 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       pieces.remove(widget);
       pieces.insert(0, widget);
+      piecesCount--;
     });
+
+
+    print("bring to back ${piecesCount}");
   }
 
   @override
@@ -130,12 +136,14 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: EdgeInsets.all(10),
               child: _image == null
                   ? Text("")
-                  : Image.file(
-                      _image,
-                      width: double.infinity,
-                      height: 100,
-                      alignment: Alignment.bottomLeft,
-                    ),
+                  : piecesCount == 0
+                      ? Padding(padding: EdgeInsets.symmetric(vertical: 20),child: Text("Congratulations", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),))
+                      : Image.file(
+                          _image,
+                          width: double.infinity,
+                          height: 100,
+                          alignment: Alignment.bottomLeft,
+                        ),
             ),
           ],
         ),

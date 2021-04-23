@@ -6,6 +6,10 @@ Flutter application.
 
 ![Jigsaw Sample Preview](https://github.com/zeeshanayaz/jigsaw_puzzle_flutter/blob/master/assets/demo/jigsaw_sample_preview.gif)
 
+## Sample Video
+
+![Jigsaw Sample Video](https://github.com/zeeshanayaz/jigsaw_puzzle_flutter/blob/master/assets/demo/jigsaw_sample_video.mp4)
+
 <p float="left">
   <img src="https://github.com/zeeshanayaz/jigsaw_puzzle_flutter/blob/master/assets/demo/screen_1.png" width="100" />
   <img src="https://github.com/zeeshanayaz/jigsaw_puzzle_flutter/blob/master/assets/demo/screen_2.png" width="100" />
